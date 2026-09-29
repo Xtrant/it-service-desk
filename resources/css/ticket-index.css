@@ -1,0 +1,124 @@
+.ticket-filter-form {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) 180px 160px 180px auto auto;
+    gap: 8px;
+    margin-top: 4px;
+    margin-bottom: 18px;
+    padding: 14px;
+    border: 1px solid #263247;
+    border-radius: 12px;
+    background: #111827;
+}
+
+.ticket-filter-form input,
+.ticket-filter-form select {
+    width: 100%;
+    min-height: 36px;
+    padding: 0 10px;
+    border: 1px solid #2b3a50;
+    border-radius: 8px;
+    outline: none;
+    background: #151e2c;
+    color: #e5e7eb;
+    font-family: inherit;
+    font-size: 11px;
+}
+
+.ticket-filter-form input::placeholder {
+    color: #71809a;
+}
+
+.ticket-filter-form input:focus,
+.ticket-filter-form select:focus {
+    border-color: #3b82f6;
+    background: #172235;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.08);
+}
+
+.ticket-filter-form button,
+.ticket-filter-form a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ticket-filter-form button {
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ticket-filter-form button:hover {
+    border-color: #3b82f6;
+    background: #3b82f6;
+}
+
+.ticket-filter-form a {
+    border: 1px solid #2b3a50;
+    background: #151e2c;
+    color: #a0aec0;
+}
+
+.ticket-filter-form a:hover {
+    border-color: #3a4b63;
+    background: #1b2739;
+    color: #f3f4f6;
+}
+
+.dashboard-ticket-side {
+    align-items: flex-end;
+}
+
+.dashboard-ticket-priority,
+.dashboard-ticket-pic {
+    color: #a0aec0;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.dashboard-ticket-priority {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.dashboard-ticket-pic {
+    max-width: 150px;
+    text-align: right;
+}
+
+@media (max-width: 800px) {
+    .ticket-filter-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ticket-filter-form input {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .ticket-filter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-filter-form input {
+        grid-column: auto;
+    }
+
+    .dashboard-ticket-side {
+        align-items: flex-start;
+    }
+
+    .dashboard-ticket-pic {
+        max-width: none;
+        text-align: left;
+    }
+}
